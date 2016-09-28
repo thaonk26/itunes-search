@@ -1,0 +1,49 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#command_line {
+    display: none;
+    size: 50px;
+}
+
+
+
+input {
+    background-color: black;
+    border: 1px solid #333;
+    display: inline-block;
+    font-size: 17px;
+   	width: 100%;
+    color: white;
+}
+
+
+
+
+
+/*===Footer===*/
+#footer{
+	bottom:0;
+	color: #696969;
+	position: fixed;
+	margin: 20px 10px;
+}
