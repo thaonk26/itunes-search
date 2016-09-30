@@ -5,7 +5,7 @@ function searchSongs(){
    media: 'music',
    entity: 'musicTrack',
    //attribute: 'artistTerm,albumTerm,songTerm,musicTrackTerm',
-   limit: 50,
+   limit: 150,
    callback: 'itunesSearch'
  };
  var params = urlEncode(params);
@@ -29,7 +29,7 @@ function urlEncode(obj) {
 
 function itunesSearch(arg){
 	var object = arg.results;
-	var url = "";
+	var table = "";
 
 		for(var i = 0; i < object.length; i++){
 			var temp = object[i];
@@ -60,23 +60,23 @@ function itunesSearch(arg){
 
 
 
-			url += '<tr class="pagination-sm">';
-			url += '<td><span class="spacer">[z]</span></td>'.replace('[z]', temp.trackName);
-			url += '<td><span class="spacer"><a href="[z]">[x]</a></span></td>'.replace('[z]', temp.trackViewUrl).replace('[x]', temp.artistName);
-			url += '<td><span class="spacer">$[z]</span></td>'.replace('[z]', temp.trackPrice);
-			url += '<td><span class="spacer">[z]</span></td>'.replace('[z]', getFormattedDate(temp.releaseDate));
-			url += '<td><span class="spacer"><audio controls preload="none" style="width:480px;">'
-			url += '<source src="[z]" type="audio/mp4" /></audio></span></td></tr>'.replace('[z]', temp.previewUrl);
+			table += '<tr class="pagination-sm">';
+			table += '<td><span class="spacer">[z]</span></td>'.replace('[z]', temp.trackName);
+			table += '<td><span class="spacer"><a href="[z]">[x]</a></span></td>'.replace('[z]', temp.trackViewUrl).replace('[x]', temp.artistName);
+			table += '<td><span class="spacer">$[z]</span></td>'.replace('[z]', temp.trackPrice);
+			table += '<td><span class="spacer">[z]</span></td>'.replace('[z]', getFormattedDate(temp.releaseDate));
+			table += '<td><span class="spacer"><audio controls preload="none" style="width:480px;">'
+			table += '<source src="[z]" type="audio/mp4" /></audio></span></td></tr>'.replace('[z]', temp.previewUrl);
 
 			// url += '<span class="spacer">[z]<\/span>'.replace('[z]', temp.primaryGenreName);
 			// url += '<span class="spacer">[z]<\/span> '.replace('[z]', temp.artistName);
 
 		}
 		// $('#table').clone().insertBefore("#placeholder").fadeIn(1000);
-$("#placeholder").append(url);
+$("#placeholder").append(table);
 $('#placeholder').easyPaginate({
      paginateElement: 'tr',
-     elementsPerPage: 5,
+     elementsPerPage: 10,
      effect: 'default'
  });
 $('.Title').fadeIn(1000);

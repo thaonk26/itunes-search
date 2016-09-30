@@ -21,22 +21,25 @@
             window.data = response;
         }
     </script>
-
-
+<style>
+h3 {
+    margin-top: 250px;
+}
+</style>
 </head>
 
 <body>
-<h3 align="center"> iTunes Search</h3>
+<h3 align="center" margin-top="150px"> iTunes Search</h3>
 
 <div>
+        <center>
     <form onsubmit="return false" class="navbar-form" role="search">
     <div class="form-group">
-        <center>
             <input autofocus="autofocus" id="command_line" class="form-control" size="50" type="text" onkeydown="if(event.keyCode == 13) searchSongs()">
-            <input autofocus="autofocus" type="button" placeholder="e.g. &quot;Nsync&quot;, &quot;Adele&quot;, or &quot;Phish&quot;" class="btn btn-default" onclick="searchSongs()" id="search" value="Search!" autocomplete="off">
-          </center>
+            <input autofocus="autofocus" type="button" class="btn btn-default" onclick="searchSongs()" id="search" value="Search!" autocomplete="off">
     </form>
  </div>
+          </center>
  <div id="hold" align="center"  class="table table-striped table-hover ">
 <table id="placeholder" align="center" class="table table-striped table-hover ">
     <tr>

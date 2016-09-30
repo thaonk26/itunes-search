@@ -11,20 +11,6 @@
 table {
     margin-top: 50px;
 }
-#hold {
-    padding-right: 5px;
-    text-align: left;
-}
-
-
-/*input {
-    background-color: black;
-    border: 1px solid #333;
-    display: inline-block;
-    font-size: 17px;
-    width: 100%;
-    color: white;
-}*/
 
 /*===sidebar===*/
 #sidebar {
@@ -33,28 +19,12 @@ table {
     padding: 25px;
 }
 
-/*====Span===*/
-/*span {
-    width: 100px;
-    align-self: auto;
-    vertical-align: left;
-    margin: 60px;
-}
-.spacer {
-    margin: 50px;
-    vertical-align: left;
-}
-
-.title-spacer {
-    margin: 100px;
-}*/
-/*===a href===*/
-a {
-    color: red;
-}
 /*===Inputs==*/
 #command_line {
-
+    border-top: none;
+    border-left: none;
+    border-top: none;
+    border-bottom: ridge;
     size: 50px;
     color: black;
 }
