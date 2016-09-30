@@ -4,28 +4,59 @@
 <head>
     <meta charset="utf-8">
     <script src="scripts/jquery.js" type="text/javascript"></script>
-    <script src="scripts/app.js" type="text/javascript"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-   <!--  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css"> -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="jquery.easyPaginate.js"></script>
+    <script src="scripts/app.js" type="text/javascript"></script>
     <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" rel="stylesheet">
-    <link href="scripts/styles.css" rel="stylesheet" type="text/css">
+    <link href="scripts/style.css" rel="stylesheet" type="text/css">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
     <title>devCodeCamp &middot;iTunes Search</title>
     <meta content="iTunes Search" name="description">
     <meta content="iTunes, Search" name="keywords">
+    <script type="text/javascript">
+        var dataReceiver = function(response){
+            window.data = response;
+        }
+    </script>
+
+
 </head>
 
 <body>
+<h3 align="center"> iTunes Search</h3>
 
-
-
-
-
-
+<div>
     <form onsubmit="return false">
         <center>
-            <input autofocus="autofocus" id="command_line" size="50" type="text">
+            <input autofocus="autofocus" id="command_line" size="50" type="text" onkeydown="if(event.keyCode == 13) searchSongs()">
+            <input autofocus="autofocus" type="button" onclick="searchSongs()" id="search" value="Search!">
         </center>
     </form>
-<script src="scripts/app.js"></script>
+ </div>
+<table id="placeholder" align="center">
+    <tr>
+    <td>Song Title</td>
+    <td>Artist</td>
+    <td>Song Time</td>
+    <td>Year Released</td>
+    <td>Preview Song</td>
+    </tr>
+
+
+<!-- <div id="placeholder"></div> -->
+    </table>
+<footer>
+<div class="container">
+    <ul id="pagination">
+        <li><a href="#" aria-label="Previous">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+<!-- </div> -->
+</footer>
 </body>
 </html>

@@ -4,46 +4,87 @@ body {
     font-family: "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#command_line {
-    display: none;
-    size: 50px;
+/*===table===*/
+#placeholder {
+    float: center;
+    padding-right: 5px;
+}
+table {
+    margin-top: 50px;
 }
 
 
 
-input {
+/*input {
     background-color: black;
     border: 1px solid #333;
     display: inline-block;
     font-size: 17px;
-   	width: 100%;
+    width: 100%;
     color: white;
+}*/
+
+/*===sidebar===*/
+#sidebar {
+    float: right;
+    width: 280;
+    padding: 25px;
 }
 
+/*====Span===*/
+span {
+    width: 100px;
+    align-self: auto;
+    vertical-align: middle;
+    margin: 60px;
+}
+.spacer {
+    margin: 50px;
+    vertical-align: left;
+}
 
+.title-spacer {
+    margin: 100px;
+}
+/*===a href===*/
+a {
+    color: red;
+}
+/*===Inputs==*/
+#command_line {
 
+    size: 50px;
+    color: black;
+}
 
+#search {
+    color: black;
+}
 
+#song-searched {
+    margin-right: 280px;
+    width: 850px;
+    padding: 10px;
+    border: 5px solid gray;
+    height: 160px;
+}
+/*===img===*/
+#icon {
+    float: right;
+}
 /*===Footer===*/
 #footer{
 	bottom:0;
 	color: #696969;
 	position: fixed;
 	margin: 20px 10px;
+    clear: both;
 }
+
+/*===table===*/
+td,th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 2px;
+}
+
