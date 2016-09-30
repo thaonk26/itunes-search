@@ -60,7 +60,7 @@ function itunesSearch(arg){
 
 
 
-			url += '<tr>';
+			url += '<tr class="pagination-sm">';
 			url += '<td><span class="spacer">[z]</span></td>'.replace('[z]', temp.trackName);
 			url += '<td><span class="spacer"><a href="[z]">[x]</a></span></td>'.replace('[z]', temp.trackViewUrl).replace('[x]', temp.artistName);
 			url += '<td><span class="spacer">[z]</span></td>'.replace('[z]', temp.trackPrice);
@@ -74,11 +74,12 @@ function itunesSearch(arg){
 		}
 		// $('#table').clone().insertBefore("#placeholder").fadeIn(1000);
 $("#placeholder").append(url);
-$('#pagination').easyPaginate({
-     paginateElement: 'div',
+$('#placeholder').easyPaginate({
+     paginateElement: 'tr',
      elementsPerPage: 5,
-     effect: 'fade'
+     effect: 'default'
  });
+$('.Title').fadeIn(1000);
 }
 function getFormattedDate(date){
 	var newDate = date.split('T');

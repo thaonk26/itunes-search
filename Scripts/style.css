@@ -6,7 +6,6 @@ body {
 
 /*===table===*/
 #placeholder {
-    float: center;
     padding-right: 5px;
 }
 table {
@@ -32,10 +31,10 @@ table {
 }
 
 /*====Span===*/
-span {
+/*span {
     width: 100px;
     align-self: auto;
-    vertical-align: middle;
+    vertical-align: left;
     margin: 60px;
 }
 .spacer {
@@ -45,7 +44,7 @@ span {
 
 .title-spacer {
     margin: 100px;
-}
+}*/
 /*===a href===*/
 a {
     color: red;
@@ -57,9 +56,9 @@ a {
     color: black;
 }
 
-#search {
+/*#search {
     color: black;
-}
+}*/
 
 #song-searched {
     margin-right: 280px;
@@ -87,4 +86,30 @@ td,th{
     text-align: left;
     padding: 2px;
 }
+th {
+    display: none;
+}
 
+/*===Pagination===*/
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+.pagination-sm > td > a,
+.pagination-sm > td > span {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.pagination-sm > td:first-child > a,
+.pagination-sm > td:first-child > span {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+.pagination-sm > td:last-child > a,
+.pagination-sm > td:last-child > span {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
