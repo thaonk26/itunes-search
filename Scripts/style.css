@@ -1,8 +1,8 @@
-body {
-    background-color: black;
+/*body {
+    background-color: lime;
     color: white;
     font-family: "Raleway", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-}
+}*/
 
 /*===table===*/
 #placeholder {
@@ -11,7 +11,10 @@ body {
 table {
     margin-top: 50px;
 }
-
+#hold {
+    padding-right: 5px;
+    text-align: left;
+}
 
 
 /*input {
@@ -66,6 +69,7 @@ a {
     padding: 10px;
     border: 5px solid gray;
     height: 160px;
+    align: center;
 }
 /*===img===*/
 #icon {
@@ -91,25 +95,18 @@ th {
 }
 
 /*===Pagination===*/
-.pagination {
-  display: inline-block;
-  padding-left: 0;
-  margin: 20px 0;
-  border-radius: 4px;
-}
-.pagination-sm > td > a,
-.pagination-sm > td > span {
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-}
-.pagination-sm > td:first-child > a,
-.pagination-sm > td:first-child > span {
-  border-bottom-left-radius: 3px;
-  border-top-left-radius: 3px;
-}
-.pagination-sm > td:last-child > a,
-.pagination-sm > td:last-child > span {
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-}
+.easyPaginateNav a {
+    position: relative;
+    float: left;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #222222;
+    border: 1px solid #282828;
+    margin-left: -1px;
+    }
+   .easyPaginateNav a.current {
+     font-weight:bold;
+     text-decoration:underline;
+   }

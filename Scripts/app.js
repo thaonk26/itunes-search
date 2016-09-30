@@ -5,7 +5,7 @@ function searchSongs(){
    media: 'music',
    entity: 'musicTrack',
    //attribute: 'artistTerm,albumTerm,songTerm,musicTrackTerm',
-   limit: 20,
+   limit: 50,
    callback: 'itunesSearch'
  };
  var params = urlEncode(params);
@@ -52,7 +52,7 @@ function itunesSearch(arg){
 			// url += 'Artist Name: <span class ="spacer">[z]<\/span> '.replace('[z]', temp.artistName);
 			// url += '<a href="[z]">Full Album<\/a><br>'.replace('[z]', temp.trackViewUrl);
 			// url += 'Track Name: <span class="spacer">[z]<\/span><br>'.replace('[z]', temp.trackName);
-			// url += 'Track Price: <span class="spacer">[z]<\/span><br>'.replace('[z]', temp.trackPrice);
+			// url += 'Track Price: <span class="spacer">$[z]<\/span><br>'.replace('[z]', temp.trackPrice);
 			// url += 'Release Date: <span class="spacer">[z]<\/span><br>'.replace('[z]', getFormattedDate(temp.releaseDate));
 			// url += 'Preview Track: <span class="spacer"><audio controls preload="none" style="width:480px;">'
 			// url += '<source src="[z]" type="audio/mp4" \/><\/audio><\/span><br>'.replace('[z]', temp.previewUrl);
@@ -63,7 +63,7 @@ function itunesSearch(arg){
 			url += '<tr class="pagination-sm">';
 			url += '<td><span class="spacer">[z]</span></td>'.replace('[z]', temp.trackName);
 			url += '<td><span class="spacer"><a href="[z]">[x]</a></span></td>'.replace('[z]', temp.trackViewUrl).replace('[x]', temp.artistName);
-			url += '<td><span class="spacer">[z]</span></td>'.replace('[z]', temp.trackPrice);
+			url += '<td><span class="spacer">$[z]</span></td>'.replace('[z]', temp.trackPrice);
 			url += '<td><span class="spacer">[z]</span></td>'.replace('[z]', getFormattedDate(temp.releaseDate));
 			url += '<td><span class="spacer"><audio controls preload="none" style="width:480px;">'
 			url += '<source src="[z]" type="audio/mp4" /></audio></span></td></tr>'.replace('[z]', temp.previewUrl);
