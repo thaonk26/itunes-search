@@ -3,8 +3,10 @@ var timer;
 $(document).ready(function() {
 	$('#command_line').keyup(function(event) {
 		// if(event.keyCode == 13){
+			var input = $('#command_line').val();
+			input = input.toLowerCase().replace(/\s+/g, '');
 			clearTimeout(timer);
-		if($('#command_line').val() != ''){
+		if(input != ''){
 			timer = setTimeout("searchSongs()", 400);
 		}else {
 			clear_all();
@@ -12,7 +14,7 @@ $(document).ready(function() {
 	})
 	$('#selectType').change(function() {
 		clearTimeout(timer);
-		if($('#command_line').val() != '') timer = setTimeout("searchSongs()", 400);
+		if(input != '') timer = setTimeout("searchSongs()", 400);
 		else clear_all();
 	});
 });
@@ -37,7 +39,7 @@ var select = $('#selectType').val();
  var url = 'http://itunes.apple.com/search?' + params;
  var html = '<script src="' + url + '"><\/script>';
  $('head').append(html);
- $('#command_line').removeClass('loader');
+
  // $("#command_line").val("");
 }
 
@@ -107,6 +109,7 @@ $('#placeholder').easyPaginate({
      effect: 'default'
  });
 $('.Title').fadeIn(1000);
+ $('#command_line').removeClass('loader');
 // $('#Title').removeClass('Title');
 // $('#Artist').removeClass('Title');
 // $('#Song').removeClass('Title');
