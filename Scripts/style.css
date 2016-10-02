@@ -27,6 +27,7 @@ table {
     border-bottom: ridge;
     size: 50px;
     color: black;
+    height: 40px;
 }
 
 /*#search {
@@ -60,7 +61,7 @@ td,th{
     text-align: left;
     padding: 2px;
 }
-th {
+.Title {
     display: none;
 }
 
@@ -80,3 +81,8 @@ th {
      font-weight:bold;
      text-decoration:underline;
    }
+/*===GIF===*/
+/*===Image from Justanotheraccount224 at http://imgur.com/gallery/EATfJf4 ===*/
+.loader {
+    background: no-repeat center right url("loading.gif");
+}

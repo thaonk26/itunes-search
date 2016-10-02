@@ -23,31 +23,38 @@
     </script>
 <style>
 h3 {
-    margin-top: 250px;
+    margin-top: 180px;
 }
 </style>
 </head>
 
 <body>
-<h3 align="center" margin-top="150px"> iTunes Search</h3>
-
+<h3 align="center" margin-top="150px"> iSearch</h3>
+<p align="center">Find songs and movies anywhere.</p>
 <div>
         <center>
     <form onsubmit="return false" class="navbar-form" role="search">
+        <select id="selectType">
+            <option value="music" selected="selected">Music</option>
+            <option value="movie">Movie</option>
+        </select>
     <div class="form-group">
-            <input autofocus="autofocus" id="command_line" class="form-control" size="50" type="text" onkeydown="if(event.keyCode == 13) searchSongs()">
-            <input autofocus="autofocus" type="button" class="btn btn-default" onclick="searchSongs()" id="search" value="Search!" autocomplete="off">
+            <input autofocus="autofocus" id="command_line"  size="50" type="text" >
+            <!-- onkeydown="if(event.keyCode == 13) searchSongs()"> -->
+            <!-- <input autofocus="autofocus" type="button" class="btn btn-default" onclick="searchSongs()" id="search" value="Search!" autocomplete="off"> -->
+            <div id= "tester"/>
     </form>
  </div>
           </center>
  <div id="hold" align="center"  class="table table-striped table-hover ">
 <table id="placeholder" align="center" class="table table-striped table-hover ">
     <tr>
-    <th class="Title">Song Title</th>
-    <th class="Title">Artist</th>
-    <th class="Title">Song Time</th>
-    <th class="Title">Year Released</th>
-    <th class="Title">Preview Song</th>
+    <th id="Picture" class="Title">Cover</th>
+    <th id="Title" class="Title">Song Title</th>
+    <th id="Artist" class="Title">Artist</th>
+    <th id="Song" class="Title">Song Time</th>
+    <th id="Year" class="Title">Year Released</th>
+    <th id="Preview" class="Title">Preview Song</th>
     </tr>
 
 
