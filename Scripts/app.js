@@ -2,7 +2,6 @@ var timer;
 
 $(document).ready(function() {
 	$('#command_line').keyup(function(event) {
-		// if(event.keyCode == 13){
 			var input = $('#command_line').val();
 			input = input.toLowerCase().replace(/\s+/g, '');
 			clearTimeout(timer);
@@ -29,8 +28,6 @@ var select = $('#selectType').val();
    term: encodeURIComponent($('#command_line').val()),
    country: 'US',
    media: select,
-   // entity: 'musicTrack',
-   //attribute: 'artistTerm,albumTerm,songTerm,musicTrackTerm',
    limit: 150,
    callback: 'itunesSearch'
  };
@@ -39,8 +36,6 @@ var select = $('#selectType').val();
  var url = 'http://itunes.apple.com/search?' + params;
  var html = '<script src="' + url + '"><\/script>';
  $('head').append(html);
-
- // $("#command_line").val("");
 }
 
 function urlEncode(obj) {
@@ -96,10 +91,6 @@ function itunesSearch(arg){
 			table += '<td><span class="spacer">[z]</span></td>'.replace('[z]', getFormattedDate(temp.releaseDate));
 			table += '<td><span class="spacer"><audio controls preload="none" style="width:480px;">'
 			table += '<source src="[z]" type="audio/mp4" /></audio></span></td></tr>'.replace('[z]', temp.previewUrl);
-
-			// url += '<span class="spacer">[z]<\/span>'.replace('[z]', temp.primaryGenreName);
-			// url += '<span class="spacer">[z]<\/span> '.replace('[z]', temp.artistName);
-
 		}
 		// $('#table').clone().insertBefore("#placeholder").fadeIn(1000);
 $("#placeholder").append(table);
@@ -110,11 +101,6 @@ $('#placeholder').easyPaginate({
  });
 $('.Title').fadeIn(1000);
  $('#command_line').removeClass('loader');
-// $('#Title').removeClass('Title');
-// $('#Artist').removeClass('Title');
-// $('#Song').removeClass('Title');
-// $('#Year').removeClass('Title');
-// $('#Preview').removeClass('Title');
 }
 function getFormattedDate(date){
 	var newDate = date.split('T');
